@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.music-content {
+  background-color: #fff;
+  padding: 0;
+  height: 650px;
+  width: 366px;
+  position: absolute;
+  top: 0;
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 40%);
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.music-player {
+  position: relative;
+  top: 30%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn:hover {
+  cursor: pointer;
+}
+
+.action-btn.action-btn-big {
+  color: red;
+  font-size: 30px;
+}
+
+.action-btn.action-btn-big:hover {
+  color: #bbb;
+  transition: all 0.15s linear;
+}
+
+.action-btn:hover {
+  color: #bbb;
+  transition: all 0.15s linear;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.like:hover {
+  color: red;
+  transition: all 0.15s linear;
+}
+
+#bg-image img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  filter: blur(1px);
+}
+#blackLayer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.404);
+  position: absolute;
+  z-index: 2;
+}
+
+.pos-f-t {
+  position: absolute;
+  width: 100%;
+}
+
+.bg-dark {
+  border-top: 1px solid;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+/*----Menu----*/
+#menu {
+  position: relative;
+  z-index: 999999;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+li.song {
+  display: flex;
+  padding: 10px;
+  display: flex;
+  padding: 10px;
+  background-color: #dedede;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+}
+
+ul#items-list {
+  padding-left: 0px;
+  width: 100%;
+}
+
+.title {
+  width: 70%;
+}
+
+span.navbar-toggler-icon {
+  color: #fff;
+}
+button#btnAdd {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  margin: 20px 10px 5px 30px;
+  border: 1px solid;
+  z-index: 999999;
+}
+label.icon:before {
+  font-family: FontAwesome;
+  content: "\f004";
+  color: #777;
+  font-size: 15px;
+  line-height: 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.15s linear;
+}
+
+label.like:before {
+  font-family: FontAwesome;
+  content: "\f088";
+  color: #777;
+  font-size: 15px;
+  line-height: 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.15s linear;
+}
+
+label.remove:before {
+  font-family: FontAwesome;
+  content: "\f2ed";
+  color: #ff564c;
+  font-size: 15px;
+  line-height: 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.15s linear;
+}
+
+.detail {
+  margin: 0px 5px 0px 4px;
+}
+
+.detail input {
+  display: none;
+}
+.detail > #heart:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > #heart1:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > #heart2:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > #heart3:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > #heart4:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > #heart5:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > #heart6:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+.detail > .likeCHK:checked ~ label.like:before {
+  content: "\f088";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+li.div > #heart7:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+li.div > #heart8:checked ~ label.icon:before {
+  content: "\f004";
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+
+/*----Volume----*/
+#volume-container {
+  position: relative;
+  width: 100%;
+  height: 0px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15%;
+}
+#volume-container img {
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+}
+.slider {
+  width: 110px;
+  height: 1px !important;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 100;
+  outline: none;
+  position: relative;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #e62c2f;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transform: scale(1);
+}
+.slider:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/*----Music Image----*/
+#music-image {
+  position: relative;
+  width: 100%;
+  height: 215px;
+  z-index: 3;
+}
+#circle-image {
+  position: absolute;
+  top: -33%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 120px;
+  height: 120px;
+  background-color: #000;
+  border-radius: 50%;
+  border: 5px solid rgba(221, 221, 221, 0.897);
+  overflow: hidden;
+}
+#music-image img {
+  width: 100%;
+  height: 104%;
+}
+#music-title {
+  position: relative;
+  top: 65%;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#artist_song {
+  font-size: 26px;
+}
+
+#artist_name {
+    font-size: 20px;
+}
+
+/*----Music Menu---*/
+#music-menu {
+  width: 90%;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+#music-menu img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+/*----Current Time----*/
+#currentTime {
+  position: relative;
+  z-index: 3;
+  padding: 0 12px 5px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+#currentTime span {
+  font-size: 12px;
+}
+
+/*----SeekSlider----*/
+.seekslider {
+  width: 240px;
+  height: 2px !important;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 3;
+  outline: none;
+  position: fixed;
+  margin-left: 70px;
+}
+.seekslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #e62c2f;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transform: scale(1);
+}
+.seekslider:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/*----Pause Play----*/
+#buttons {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  margin-top: 20px;
+}
+
+#buttons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play {
+  width: 60px;
+  height: 50px;
+  margin: 0 5px;
+}
+
+#buttons .like {
+  position: absolute;
+  top: 33%;
+  right: 8%;
+  cursor: pointer;
+}
+#buttons .like i {
+  color: rgba(255, 255, 255, 0.883);
+}
+#buttons .repeat {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  font-size: 15px;
+  cursor: pointer;
+}
+#button .repeat i {
+  color: rgba(255, 255, 255, 0.883);
+}
+#like.red {
+  color: red;
+}
+
+#mute.red {
+  color: red;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+li.delete i {
+  /* display: inline-block; */
+  float: right;
+}

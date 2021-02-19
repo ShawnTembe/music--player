@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="rgba(0, 0, 0, 0.8)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="main-container">
+        <div class="music-content">
+
+            <div id="bg-image">
+                <div id="blackLayer"></div>
+                <img id="bgImage" src="images/bg.jpg" alt="">
+            </div>
+            <div >
+              
+            </div>
+            <div class="pos-f-t">
+              <nav class="navbar navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                
+                </button>
+              </nav>
+              <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4" id="menu">
+                  <ul class="menu"  id="items-list">
+                  
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+            <div id="volume-container">
+                <img src="images/volume-low.png" alt="" id="volumn-down">
+                <input id="volumeslider" class="slider" type="range" min="0" max="100" value="100" step="1">
+                <img src="images/volumn-high.png" alt="" id="volumn-up">
+            </div>
+
+            <div class="music-player">
+              <div id="music-image">
+                <div id="music-title">
+                    <div id="artist_song"></div>
+                    <div id="artist_name"></div>
+                </div>
+            </div>
+    
+            <div id="music-menu">
+                <button id="random" class="action-btn"><i class="fas fa-random"></i></button>
+                <button id="mutebtn" class="action-btn"><i class="fas fa-volume-mute" id="mute" onclick="mute()"></i></button>
+            </div>
+            <div id="currentTime">
+                <span id="curtimetext">00:00</span>
+                <span id="durtimetext">00:00</span>
+            </div>
+            <input id="seekslider" class="seekslider" type="range" min="0" max="100" value="0" step="1">
+
+            <div id="buttons">
+                <span class="repeat" id="repeat"><i class="fas fa-repeat"></i></span>
+                 <div class="navigation">
+                      <button id="prevbtn" class="action-btn">
+                          <i class="fas fa-backward"></i>
+                      </button>
+                      <button id="playpausebtn" class="action-btn action-btn-big">
+                          <i class="fas fa-play"></i>
+                      </button>
+                      <button id="nextbtn" class="action-btn">
+                          <i class="fas fa-forward"></i>
+                      </button>
+                 </div>
+                <span class="like">
+                    <i class="far fa-heart" id="like" onclick="changeColor()" aria-hidden="true"></i> 
+                </span>          
+            </div>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
