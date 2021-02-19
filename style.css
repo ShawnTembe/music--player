@@ -323,7 +323,7 @@ li.div > #heart8:checked ~ label.icon:before {
 }
 
 #artist_name {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /*----Music Menu---*/
